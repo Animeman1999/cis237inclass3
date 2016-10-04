@@ -23,6 +23,25 @@ namespace cis237inclass3
             return base.ToString() + " " + _weeklySalary.ToString("C");
         }
 
+        public override string ToString()
+        {
+            //Take the string the parent's(base) ToString will retuen, and concat the weeklySalary to it.
+            //Must use thekeyword base if trying to access the parents version of the method.
+            return base.ToString() + " " + this._weeklySalary;
+        }
+
+        public override string GetAllEmployeeInformation()
+        {
+            return base.GetAllEmployeeInformation() + " " + this._weeklySalary;
+        }
+
+        //Override the abstract method in the Employee class. Because the Employee class declares the
+        //method as abstract, this class MUST implement it.
+        public override decimal GetYearlySalary()
+        {
+            return this._weeklySalary * 52;
+        }
+
         //Constructor
         public SalaryEmployee(string FirstName, string LastName, DateTime StartDate, decimal WeeklySalary) 
             //This next part calls the parent classes constructor so that we don't hae to repeat the work
@@ -32,6 +51,6 @@ namespace cis237inclass3
             _weeklySalary = WeeklySalary;
         }
 
-        public SalaryEmployee() : base() { }  // make abase constructor that is a copy of the base constructor
+        public SalaryEmployee() : base() { }  // make a base constructor that is a copy of the base constructor
     }
 }

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace cis237inclass3
 {
-    class Employee
+    //Make this class abstract.  This way it can not be instaciated on it's own, but will
+    //provice a good base for the other tow types of employees.
+    abstract class Employee : IEmployee 
     {
         //Variables
         protected string _firstname;
@@ -38,10 +40,23 @@ namespace cis237inclass3
             return _firstname + " " + _lastname;
         }
         
-        public DayOfWeek GetStartDay()
+
+        public int GetEmploymentDurationInYear()
         {
-            return _startDate.DayOfWeek;
+            //Subtract the ticks of the start date from, and then get the days and divid it by 365
+            return new TimeSpan(DateTime.Now.Ticks - this._startDate.Ticks).Days / 365;
         }
+
+        public virtual string GetAllEmployeeInformation()//NOTE made virtual so it can be overidden.
+        {
+            //Take all of the properties for the employee and concat them together.
+            return this._firstname + " " + this._lastname + " " + this.GetEmploymentDurationInYear();
+        }
+
+        //Get the Yearly Salary of the employee
+        //Make the method abstract because we want the sub classes to implement it, but
+        //at this level we don't know how to implement it.
+        public abstract decimal GetYearlySalary();
 
         //Constructors
 
