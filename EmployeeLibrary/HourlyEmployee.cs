@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cis237inclass3
+namespace EmployeeLibrary
 {
-    class HourlyEmployee : Employee
+    public class HourlyEmployee : Employee
     {
         //Variable for this class
         private decimal _hourlyRate;

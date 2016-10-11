@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{874DABD4-11A3-4602-85DB-B96BD3F1BE03}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{360C4204-F7C0-4099-AB03-F9FECED0E99A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cis237inclass3</RootNamespace>
-    <AssemblyName>cis237inclass3</AssemblyName>
+    <RootNamespace>EmployeeLibrary</RootNamespace>
+    <AssemblyName>EmployeeLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,19 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EmployeeCollection.cs" />
-    <Compile Include="IEmployeeCollection.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="HourlyEmployee.cs" />
+    <Compile Include="IEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EmployeeLibrary\EmployeeLibrary.csproj">
-      <Project>{360c4204-f7c0-4099-ab03-f9feced0e99a}</Project>
-      <Name>EmployeeLibrary</Name>
-    </ProjectReference>
+    <Compile Include="SalaryEmployee.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

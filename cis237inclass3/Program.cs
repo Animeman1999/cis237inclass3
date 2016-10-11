@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EmployeeLibrary;
 
 namespace cis237inclass3
 {
@@ -10,7 +11,7 @@ namespace cis237inclass3
     {
         static void Main(string[] args)
         {
-            SalaryEmployee sEmployee = new SalaryEmployee("David", "Barnes", new DateTime(2014, 10, 31), 537.36m);
+            EmployeeLibrary.SalaryEmployee sEmployee = new SalaryEmployee("David", "Barnes", new DateTime(2014, 10, 31), 537.36m);
             SalaryEmployee sEmployee2 = new SalaryEmployee();
             //Output the SalaryEmployee converted to a string
             Console.WriteLine(sEmployee.ToString());

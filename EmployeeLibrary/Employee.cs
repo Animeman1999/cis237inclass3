@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cis237inclass3
+namespace EmployeeLibrary
 {
     //Make this class abstract.  This way it can not be instaciated on it's own, but will
     //provice a good base for the other tow types of employees.
-    abstract class Employee : IEmployee 
+    public abstract class Employee : IEmployee 
     {
         //Variables
         protected string _firstname;

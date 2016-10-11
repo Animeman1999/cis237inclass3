@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cis237inclass3
+namespace EmployeeLibrary
 {
-    interface IEmployee
+    public interface IEmployee
     {
         //Declare all the public methods and properties that must be implemented 
         //in child classes
